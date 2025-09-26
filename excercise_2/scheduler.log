@@ -1,0 +1,77 @@
+[LOG 2025-09-26T15:47:29.111765500] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T15:47:29.119846] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T15:47:29.121842800] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T16:34:05.632147500] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T16:34:05.638698] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T16:34:05.640697500] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T16:34:46.765761900] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T16:34:46.775761700] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T16:34:46.777759900] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T16:34:57.007021900] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T16:34:57.013019] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T16:34:57.014022300] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T16:51:28.441941900] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T16:51:28.446003100] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T16:51:28.448006200] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T16:53:30.109998600] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T16:53:30.113991100] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T16:53:30.115994500] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T17:20:57.094182300] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T17:20:57.099429300] Error : Non-existent Task Task not Found.
+[LOG 2025-09-26T17:20:57.102084] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T18:49:21.535434200] Task added successfully. No conflicts.
+[LOG 2025-09-26T18:49:21.561782500] Task added successfully. No conflicts.
+[LOG 2025-09-26T18:49:21.596148100] Task removed successfully.
+[LOG 2025-09-26T18:49:21.598141400] Task added successfully. No conflicts.
+[LOG 2025-09-26T18:49:21.599144800] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T18:49:21.601143] Error : Task not Found.
+[LOG 2025-09-26T18:49:21.603180300] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T18:49:21.605474300] Training Session marked as completed.
+[LOG 2025-09-26T19:18:57.081623200] Task added successfully. No conflicts.
+[LOG 2025-09-26T19:18:57.100582300] Task added successfully. No conflicts.
+[LOG 2025-09-26T19:18:57.126370100] Task removed successfully.
+[LOG 2025-09-26T19:18:57.127395700] Task added successfully. No conflicts.
+[LOG 2025-09-26T19:18:57.128617700] Error : Training Session overlap with existing task Team Meeting
+[LOG 2025-09-26T19:18:57.129639100] Error : Task not Found.
+[LOG 2025-09-26T19:18:57.130930300] Error : Overlap Task overlap with existing task Team Meeting
+[LOG 2025-09-26T19:18:57.133671500] Training Session marked as completed.
+[LOG 2025-09-26T22:52:42.129669700] Task added successfully: Morning Exercise
+[LOG 2025-09-26T22:52:42.152187100] Task added successfully: Team Meeting
+[LOG 2025-09-26T22:52:42.177578900] Task removed successfully: Morning Exercise
+[LOG 2025-09-26T22:52:42.178578500] Task added successfully: Lunch Break
+[LOG 2025-09-26T22:52:42.178578500] Error: overlap with Team Meeting
+[LOG 2025-09-26T22:52:42.179577500] Error: Task not found.
+[LOG 2025-09-26T22:52:42.180577400] Error: overlap with Team Meeting
+[LOG 2025-09-26T22:52:42.181578800] Error: Task not found.
+[LOG 2025-09-26T22:52:56.473361500] Task added successfully: Morning Exercise
+[LOG 2025-09-26T22:52:56.484865300] Task added successfully: Team Meeting
+[LOG 2025-09-26T22:52:56.506345300] Task removed successfully: Morning Exercise
+[LOG 2025-09-26T22:52:56.507346400] Task added successfully: Lunch Break
+[LOG 2025-09-26T22:52:56.508344400] Error: overlap with Team Meeting
+[LOG 2025-09-26T22:52:56.509346900] Error: Task not found.
+[LOG 2025-09-26T22:52:56.510345] Error: overlap with Team Meeting
+[LOG 2025-09-26T22:52:56.511344800] Error: Task not found.
+[LOG 2025-09-26T23:10:01.483057800] Task added successfully: Morning Exercise
+[LOG 2025-09-26T23:10:01.507435200] Task added successfully: Team Meeting
+[LOG 2025-09-26T23:10:01.530889300] Task removed successfully: Morning Exercise
+[LOG 2025-09-26T23:10:01.532881300] Task added successfully: Lunch Break
+[LOG 2025-09-26T23:10:01.533898600] Task updated successfully: Training Session
+[LOG 2025-09-26T23:10:01.534896800] Error: Task not found.
+[LOG 2025-09-26T23:10:01.535894500] Error: overlap with Training Session
+[LOG 2025-09-26T23:10:01.538914600] Training Session marked as completed.
+[LOG 2025-09-26T23:55:03.640845800] Task added successfully: Morning Exercise
+[LOG 2025-09-26T23:55:03.652842300] Task added successfully: Team Meeting
+[LOG 2025-09-26T23:55:03.672841300] Task removed successfully: Morning Exercise
+[LOG 2025-09-26T23:55:03.673841900] Task added successfully: Lunch Break
+[LOG 2025-09-26T23:55:03.674840200] Task updated successfully: Training Session
+[LOG 2025-09-26T23:55:03.675842500] Error: Task not found.
+[LOG 2025-09-26T23:55:03.676844200] Error: overlap with Training Session
+[LOG 2025-09-26T23:55:03.679842600] Training Session marked as completed.
+[LOG 2025-09-27T00:05:07.802503500] Task added successfully: Morning Exercise
+[LOG 2025-09-27T00:05:07.817495500] Task added successfully: Team Meeting
+[LOG 2025-09-27T00:05:07.841800400] Task removed successfully: Morning Exercise
+[LOG 2025-09-27T00:05:07.842801] Task added successfully: Lunch Break
+[LOG 2025-09-27T00:05:07.843807300] Task updated successfully: Training Session
+[LOG 2025-09-27T00:05:07.844927300] Error: Task not found.
+[LOG 2025-09-27T00:05:07.845927] Error: overlap with Training Session
+[LOG 2025-09-27T00:05:07.847925700] Training Session marked as completed.
