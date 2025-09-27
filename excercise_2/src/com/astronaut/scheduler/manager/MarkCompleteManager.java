@@ -7,14 +7,24 @@ import com.astronaut.scheduler.exception.TaskNotFoundException;
 import com.astronaut.scheduler.model.Task;
 import com.astronaut.scheduler.observer.Subject;
 
-public class MarkCompleteService implements IMarkCompleteService{
-    private final ScheduleManager manager = ScheduleManager.getInstance();
-    private final Subject notifier;
-
-    public MarkCompleteService(Subject notifier) {
+public class MarkCompleteManager implements IMarkComplete{
+    private ScheduleManager manager = ScheduleManager.getInstance();
+    private Subject notifier;
+    private static MarkCompleteManager instance;
+    public MarkCompleteManager(Subject notifier) {
         this.notifier = notifier;
     }
 
+    public static MarkCompleteManager getInstance(Subject notifier)
+   	{
+   		if(instance == null)
+   		{
+   			instance = new MarkCompleteManager(notifier);
+   		}
+   		return instance;
+   		
+   	}
+    
  // mark task as completed based on description
     public void markTaskCompleted(String description) throws TaskNotFoundException {
         TreeSet<Task> tasks = manager.getTasks();

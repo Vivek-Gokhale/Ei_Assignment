@@ -7,13 +7,23 @@ import com.astronaut.scheduler.model.Task;
 import com.astronaut.scheduler.observer.Subject;
 import com.astronaut.scheduler.utils.PriorityLevel;
 
-public class ViewTaskService implements ITaskView{
-    private final ScheduleManager manager = ScheduleManager.getInstance();
-    private final Subject notifier;
-
-    public ViewTaskService(Subject notifier) {
+public class ViewTaskManager implements ITaskView{
+    private ScheduleManager manager = ScheduleManager.getInstance();
+    private Subject notifier;
+    private static ViewTaskManager instance;
+    public ViewTaskManager(Subject notifier) {
         this.notifier = notifier;
     }
+    
+    public static ViewTaskManager getInstance(Subject notifier)
+   	{
+   		if(instance == null)
+   		{
+   			instance = new ViewTaskManager(notifier);
+   		}
+   		return instance;
+   		
+   	}
 
     // compile time polymorphism - method overloading
  	// view task which are currently stored in tree set

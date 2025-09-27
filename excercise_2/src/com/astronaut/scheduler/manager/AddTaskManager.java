@@ -9,14 +9,24 @@ import com.astronaut.scheduler.observer.Subject;
 import com.astronaut.scheduler.utils.PriorityLevel;
 import com.astronaut.scheduler.utils.TimeOverlap;
 
-public class AddTaskService implements IAddService{
+public class AddTaskManager implements IAddTask{
     private ScheduleManager manager = ScheduleManager.getInstance();
     private Subject notifier;
     private TaskFactory factory = new TaskFactory();
-
-    public AddTaskService(Subject notifier) {
+    private static AddTaskManager instance;
+    public AddTaskManager(Subject notifier) {
         this.notifier = notifier;
     }
+    
+    public static AddTaskManager getInstance(Subject notifier)
+	{
+		if(instance == null)
+		{
+			instance = new AddTaskManager(notifier);
+		}
+		return instance;
+		
+	}
 
     /**
      * Add a new task

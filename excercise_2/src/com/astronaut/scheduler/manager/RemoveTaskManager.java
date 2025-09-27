@@ -7,13 +7,23 @@ import com.astronaut.scheduler.exception.TaskNotFoundException;
 import com.astronaut.scheduler.model.Task;
 import com.astronaut.scheduler.observer.Subject;
 
-public class RemoveTaskService implements IRemoveService{
-    private final ScheduleManager manager = ScheduleManager.getInstance();
-    private final Subject notifier;
-
-    public RemoveTaskService(Subject notifier) {
+public class RemoveTaskManager implements IRemoveTask{
+    private ScheduleManager manager = ScheduleManager.getInstance();
+    private Subject notifier;
+    private static RemoveTaskManager instance;
+    public RemoveTaskManager(Subject notifier) {
         this.notifier = notifier;
     }
+    
+    public static RemoveTaskManager getInstance(Subject notifier)
+   	{
+   		if(instance == null)
+   		{
+   			instance = new RemoveTaskManager(notifier);
+   		}
+   		return instance;
+   		
+   	}
 
     // remove task from tree set based on description as parameter
     public void removeTask(String description) throws TaskNotFoundException {

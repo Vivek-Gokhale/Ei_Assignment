@@ -11,14 +11,24 @@ import com.astronaut.scheduler.observer.Subject;
 import com.astronaut.scheduler.utils.PriorityLevel;
 import com.astronaut.scheduler.utils.TimeOverlap;
 
-public class EditTaskService implements IEditService{
+public class EditTaskManager implements IEditTask{
     private ScheduleManager manager = ScheduleManager.getInstance();
     private Subject notifier;
     private TaskFactory factory = new TaskFactory();
-
-    public EditTaskService(Subject notifier) {
+    private static EditTaskManager instance;
+    public EditTaskManager(Subject notifier) {
         this.notifier = notifier;
     }
+    
+    public static EditTaskManager getInstance(Subject notifier)
+   	{
+   		if(instance == null)
+   		{
+   			instance = new EditTaskManager(notifier);
+   		}
+   		return instance;
+   		
+   	}
 
     /**
      * Edit an existing task by target description

@@ -20,6 +20,8 @@ public class ScheduleManager {
     }
 	
 	
+	
+	
 	//implement singleton design pattern to create object of schedule manager only if instance not exist
 	public static ScheduleManager getInstance()
 	{
