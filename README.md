@@ -83,7 +83,7 @@
 ---
 
 
-  ## Design Principles and Patterns Applied
+  ## Design Principles, Data Structure and Patterns Applied
 
 ### SOLID Principles
 - **S (Single Responsibility Principle):**  
@@ -100,6 +100,12 @@
 
 - **D (Dependency Inversion Principle):**  
   Services depend on abstractions (`Subject`, `Observer`) rather than concrete implementations.  
+
+---
+
+### Data Structures
+- **TreeSet:**  
+  used treeset data stucture is balanced binary search tree usefull when view operation perfomed show task in sorted format.
 
 ---
 
