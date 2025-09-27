@@ -82,74 +82,144 @@
 
 ---
 
+
+  ## Design Principles and Patterns Applied
+
+### SOLID Principles
+- **S (Single Responsibility Principle):**  
+  Each service class (Add, Edit, Remove, MarkCompleted, View) has a single responsibility.  
+
+- **O (Open/Closed Principle):**  
+  New services or observers can be added without modifying existing code.  
+
+- **L (Liskov Substitution Principle):**  
+  Observers (ConsoleObserver, FileLoggerObserver) can be swapped without breaking the system.  
+
+- **I (Interface Segregation Principle):**  
+  Interfaces are small and purpose-specific (e.g., `IAddService`, `IRemoveService`, `ITaskView`).  
+
+- **D (Dependency Inversion Principle):**  
+  Services depend on abstractions (`Subject`, `Observer`) rather than concrete implementations.  
+
+---
+
+### Design Patterns
+- **Singleton Pattern:**  
+  `ScheduleManager` ensures only one global instance exists.  
+
+- **Factory Pattern:**  
+  `TaskFactory` centralizes task creation and hides object construction details.  
+
+- **Observer Pattern:**  
+  `ConsoleObserver` and `FileLoggerObserver` are notified about task events, enabling flexible logging and monitoring.  
+
+
 ## Project Structure
 
-excericse_2
-├── src
-│ ├── com.astronaut
-│ │ └── Main.java
-│ │ → Entry point for running the project.
-│ │ Simulates different operations: add, delete, edit, mark complete, and view tasks,
-│ │ including positive and negative test cases.
-│ │
-│ ├── com.astronaut.scheduler.exception
-│ │ ├── InvalidTimeException.java
-│ │ │ → Handles invalid time formats (random string or end time before start time).
-│ │ ├── TaskConflictException.java
-│ │ │ → Handles situations where task time ranges overlap.
-│ │ └── TaskNotFoundException.java
-│ │ → Handles cases where a task is not found during remove, view, or edit operations.
-│ │
-│ ├── com.astronaut.scheduler.factory
-│ │ └── TaskFactory.java
-│ │ → Implements Factory Design Pattern to hide task object creation logic from the client.
-│ │
-│ ├── com.astronaut.scheduler.manager
-│ │ ├── ScheduleManager.java
-│ │ │ → Implements Singleton Pattern to ensure only one instance exists.
-│ │ ├── AddTaskService.java
-│ │ │ → Service class for adding tasks (adheres to SRP - Single Responsibility Principle).
-│ │ ├── EditTaskService.java
-│ │ │ → Service class for editing tasks.
-│ │ ├── ViewTaskService.java
-│ │ │ → Service class for viewing tasks.
-│ │ ├── RemoveTaskService.java
-│ │ │ → Service class for removing tasks.
-│ │ ├── MarkCompletedService.java
-│ │ │ → Service class for marking tasks as completed.
-│ │ ├── IAddService.java
-│ │ │ → Interface with add() method, implemented by AddTaskService.
-│ │ │ (adheres to OCP - Open/Closed Principle and ISP - Interface Segregation Principle).
-│ │ ├── IRemoveService.java
-│ │ │ → Interface for removing tasks.
-│ │ ├── ITaskView.java
-│ │ │ → Interface for viewing tasks, extends IViewTaskByPriority.
-│ │ ├── IViewTaskByPriority.java
-│ │ │ → Interface for viewing tasks by priority, implemented in ViewTaskByPriority.
-│ │ └── IMarkCompletedService.java
-│ │ → Interface for marking tasks as completed.
-│ │
-│ ├── com.astronaut.scheduler.model
-│ │ └── Task.java
-│ │ → Model class with fields like description, start time, end time, priority, etc.
-│ │ Includes getters, setters, and utility methods.
-│ │
-│ ├── com.astronaut.scheduler.observer
-│ │ ├── ConsoleObserver.java
-│ │ │ → Observer implementation that displays updates in the console.
-│ │ ├── FileLoggerObserver.java
-│ │ │ → Observer implementation that logs updates into a file.
-│ │ ├── Notifier.java
-│ │ │ → Maintains subscribers and notifies them on events.
-│ │ ├── Observer.java
-│ │ │ → Observer interface with update() method.
-│ │ └── Subject.java
-│ │ → Subject interface with methods to subscribe, unsubscribe, and notify observers.
-│ │
-│ └── com.astronaut.scheduler.utils
-│ ├── LoggerUtil.java
-│ │ → Utility class used by FileLoggerObserver to log status messages.
-│ ├── PriorityLevel.java
-│ │ → Enum with predefined values (HIGH, MEDIUM, LOW) to constrain user input.
-│ └── TimeValidator.java
-│ → Utility class to validate whether time formats are correct.
+### Root Folder: `excericse_2`
+- **JRE System Library [JavaSE-21]**  
+  Standard Java runtime environment.
+
+- **src** (source folder)  
+  Contains all project packages and classes.
+
+---
+
+### Package: `com.astronaut`
+- **Main.java**  
+  Entry point for running the project.  
+  Simulates different operations: add, delete, edit, mark complete, and view tasks.  
+  Includes both positive and negative test cases.
+
+---
+
+### Package: `com.astronaut.scheduler.exception`
+- **InvalidTimeException.java**  
+  Handles invalid time formats (e.g., random strings, or when end time is before start time).  
+
+- **TaskConflictException.java**  
+  Handles conflicts when two tasks overlap in their time ranges.  
+
+- **TaskNotFoundException.java**  
+  Handles cases where a task is not found during remove, view, or edit operations.  
+
+---
+
+### Package: `com.astronaut.scheduler.factory`
+- **TaskFactory.java**  
+  Implements the **Factory Design Pattern** to hide task object creation logic from the client.  
+
+---
+
+### Package: `com.astronaut.scheduler.manager`
+- **ScheduleManager.java**  
+  Implements the **Singleton Pattern** to ensure only one instance of the schedule manager exists.  
+
+- **AddTaskService.java**  
+  Service class for adding tasks (**SRP - Single Responsibility Principle**).  
+
+- **EditTaskService.java**  
+  Service class for editing tasks.  
+
+- **ViewTaskService.java**  
+  Service class for viewing tasks.  
+
+- **RemoveTaskService.java**  
+  Service class for removing tasks.  
+
+- **MarkCompletedService.java**  
+  Service class for marking tasks as completed.  
+
+- **IAddService.java**  
+  Interface with `add()` method, implemented by `AddTaskService`.  
+  Adheres to **OCP (Open/Closed Principle)** and **ISP (Interface Segregation Principle)**.  
+
+- **IRemoveService.java**  
+  Interface for removing tasks.  
+
+- **ITaskView.java**  
+  Interface for viewing tasks, extends `IViewTaskByPriority`.  
+
+- **IViewTaskByPriority.java**  
+  Interface for viewing tasks by priority.  
+
+- **IMarkCompletedService.java**  
+  Interface for marking tasks as completed.  
+
+---
+
+### Package: `com.astronaut.scheduler.model`
+- **Task.java**  
+  Model class containing fields: description, start time, end time, priority, and status.  
+  Includes getters, setters, and utility methods.  
+
+---
+
+### Package: `com.astronaut.scheduler.observer`
+- **ConsoleObserver.java**  
+  Implementation of the **Observer Pattern**, logs notifications to the console.  
+
+- **FileLoggerObserver.java**  
+  Implementation of the **Observer Pattern**, logs notifications to a file.  
+
+- **Notifier.java**  
+  Maintains a list of observers and provides subscribe, unsubscribe, and notify methods.  
+
+- **Observer.java**  
+  Observer interface with an `update()` method.  
+
+- **Subject.java**  
+  Subject interface with methods to subscribe, unsubscribe, and notify observers.  
+
+---
+
+### Package: `com.astronaut.scheduler.utils`
+- **LoggerUtil.java**  
+  Utility class used by `FileLoggerObserver` to log status messages.  
+
+- **PriorityLevel.java**  
+  Enum with predefined values (**HIGH, MEDIUM, LOW**) to constrain user input.  
+
+- **TimeValidator.java**  
+  Utility class to check whether time values are valid.
+
