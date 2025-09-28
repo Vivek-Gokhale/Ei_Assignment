@@ -9,7 +9,7 @@ import com.astronaut.scheduler.utils.TimeValidator;
 
 
 // uses factory design pattern to hide object creation logic from client side
-public class TaskFactory {
+public class TaskFactory implements ITaskFactory{
 	public Task createTask(String desc, String start, String end, PriorityLevel priority) throws InvalidTimeException
 	{
 		
