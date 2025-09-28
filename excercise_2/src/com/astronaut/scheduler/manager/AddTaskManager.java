@@ -10,12 +10,14 @@ import com.astronaut.scheduler.utils.PriorityLevel;
 import com.astronaut.scheduler.utils.TimeOverlap;
 
 public class AddTaskManager implements IAddTask{
-    private ScheduleManager manager = ScheduleManager.getInstance();
+    private ScheduleManager manager;
     private Subject notifier;
-    private TaskFactory factory = new TaskFactory();
+    private TaskFactory factory ;
     private static AddTaskManager instance;
     public AddTaskManager(Subject notifier) {
         this.notifier = notifier;
+        manager = ScheduleManager.getInstance();
+        factory = new TaskFactory();
     }
     
     public static AddTaskManager getInstance(Subject notifier)

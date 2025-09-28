@@ -8,11 +8,13 @@ import com.astronaut.scheduler.model.Task;
 import com.astronaut.scheduler.observer.Subject;
 
 public class MarkCompleteManager implements IMarkComplete{
-    private ScheduleManager manager = ScheduleManager.getInstance();
+    private ScheduleManager manager;
     private Subject notifier;
     private static MarkCompleteManager instance;
     public MarkCompleteManager(Subject notifier) {
         this.notifier = notifier;
+        manager = ScheduleManager.getInstance();
+        
     }
 
     public static MarkCompleteManager getInstance(Subject notifier)

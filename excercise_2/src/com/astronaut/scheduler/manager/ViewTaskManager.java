@@ -8,11 +8,12 @@ import com.astronaut.scheduler.observer.Subject;
 import com.astronaut.scheduler.utils.PriorityLevel;
 
 public class ViewTaskManager implements ITaskView{
-    private ScheduleManager manager = ScheduleManager.getInstance();
+    private ScheduleManager manager;
     private Subject notifier;
     private static ViewTaskManager instance;
     public ViewTaskManager(Subject notifier) {
         this.notifier = notifier;
+        manager = ScheduleManager.getInstance();
     }
     
     public static ViewTaskManager getInstance(Subject notifier)

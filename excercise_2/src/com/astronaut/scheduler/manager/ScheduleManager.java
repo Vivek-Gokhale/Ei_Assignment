@@ -19,9 +19,6 @@ public class ScheduleManager {
         tasks = new TreeSet<>(Comparator.comparing(Task::getStartTime));
     }
 	
-	
-	
-	
 	//implement singleton design pattern to create object of schedule manager only if instance not exist
 	public static ScheduleManager getInstance()
 	{

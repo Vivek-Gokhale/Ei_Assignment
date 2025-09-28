@@ -8,11 +8,12 @@ import com.astronaut.scheduler.model.Task;
 import com.astronaut.scheduler.observer.Subject;
 
 public class RemoveTaskManager implements IRemoveTask{
-    private ScheduleManager manager = ScheduleManager.getInstance();
+    private ScheduleManager manager;
     private Subject notifier;
     private static RemoveTaskManager instance;
     public RemoveTaskManager(Subject notifier) {
         this.notifier = notifier;
+        manager = ScheduleManager.getInstance();
     }
     
     public static RemoveTaskManager getInstance(Subject notifier)
