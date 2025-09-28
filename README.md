@@ -161,35 +161,35 @@
 - **ScheduleManager.java**  
   Implements the **Singleton Pattern** to ensure only one instance of the schedule manager exists.  
 
-- **AddTaskService.java**  
+- **AddTaskManager.java**  
   Service class for adding tasks (**SRP - Single Responsibility Principle**).  
 
-- **EditTaskService.java**  
+- **EditTaskManager.java**  
   Service class for editing tasks.  
 
-- **ViewTaskService.java**  
+- **ViewTaskManager.java**  
   Service class for viewing tasks.  
 
-- **RemoveTaskService.java**  
+- **RemoveTaskManager.java**  
   Service class for removing tasks.  
 
-- **MarkCompletedService.java**  
+- **MarkCompletedManager.java**  
   Service class for marking tasks as completed.  
 
-- **IAddService.java**  
+- **IAddTask.java**  
   Interface with `add()` method, implemented by `AddTaskService`.  
   Adheres to **OCP (Open/Closed Principle)** and **ISP (Interface Segregation Principle)**.  
 
-- **IRemoveService.java**  
+- **IRemoveTask.java**  
   Interface for removing tasks.  
 
 - **ITaskView.java**  
   Interface for viewing tasks, extends `IViewTaskByPriority`.  
 
-- **IViewTaskByPriority.java**  
+- **ITaskViewByPriority.java**  
   Interface for viewing tasks by priority.  
 
-- **IMarkCompletedService.java**  
+- **IMarkCompleted.java**  
   Interface for marking tasks as completed.  
 
 ---
