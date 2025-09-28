@@ -87,10 +87,10 @@
 
 ### SOLID Principles
 - **S (Single Responsibility Principle):**  
-  Each service class (Add, Edit, Remove, MarkCompleted, View) has a single responsibility.  
+  Each Manager class (Add, Edit, Remove, MarkCompleted, View) has a single responsibility.  
 
 - **O (Open/Closed Principle):**  
-  New services or observers can be added without modifying existing code.  
+  New Manager or observers can be added without modifying existing code.  
 
 - **L (Liskov Substitution Principle):**  
   Observers (ConsoleObserver, FileLoggerObserver) can be swapped without breaking the system.  
@@ -99,7 +99,7 @@
   Interfaces are small and purpose-specific (e.g., `IAddService`, `IRemoveService`, `ITaskView`).  
 
 - **D (Dependency Inversion Principle):**  
-  Services depend on abstractions (`Subject`, `Observer`) rather than concrete implementations.  
+  Manager classes depend on abstractions (`Subject`, `Observer`) rather than concrete implementations.  
 
 ---
 
