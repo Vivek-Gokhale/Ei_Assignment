@@ -76,7 +76,7 @@
 7. Mark tasks as completed.
 8. View tasks for a specific priority level.
 9. Implemented logging mechanism to log different event statuses into a scheduler log file.
-10. Exception handling with custom exceptions such as:
+10. Exception handling with custom exceptions such as (provide efficient logging in scheduler log file):
    - `InvalidTimeException`
    - `TaskConflictException`
    - `TaskNotFoundException`
@@ -118,7 +118,7 @@
   `TaskFactory` centralizes task creation and hides object construction details.  
 
 - **Observer Pattern:**  
-  `ConsoleObserver` and `FileLoggerObserver` are notified about task events, enabling flexible logging and monitoring.  
+  `Astronauts`  are notified about task events.  
 
 
 ## Project Structure
@@ -203,11 +203,8 @@
 ---
 
 ### Package: `com.astronaut.scheduler.observer`
-- **ConsoleObserver.java**  
-  Implementation of the **Observer Pattern**, logs notifications to the console.  
-
-- **FileLoggerObserver.java**  
-  Implementation of the **Observer Pattern**, logs notifications to a file.  
+- **AstronautsObserver.java**  
+  Implementation of the **Observer Pattern**, receive message sent from notifier.  
 
 - **Notifier.java**  
   Maintains a list of observers and provides subscribe, unsubscribe, and notify methods.  

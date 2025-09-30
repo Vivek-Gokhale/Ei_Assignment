@@ -1,7 +1,7 @@
-// Concrete Command: Move
+// Concrete Command: Move a chess piece
 class MoveCommand implements Command {
-    private Chess chess;
-    private String piece, from, to;
+    private Chess chess;  // receiver
+    private String piece, from, to; // move details
 
     public MoveCommand(Chess chess, String piece, String from, String to) {
         this.chess = chess;
@@ -12,11 +12,11 @@ class MoveCommand implements Command {
 
     @Override
     public void execute() {
-        chess.movePiece(piece, from, to);
+        chess.movePiece(piece, from, to); // execute move
     }
 
     @Override
     public void undo() {
-        chess.undoMove(piece, from, to);
+        chess.undoMove(piece, from, to); // undo move
     }
 }

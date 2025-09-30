@@ -2,6 +2,9 @@ package com.astronaut.scheduler.manager;
 
 import com.astronaut.scheduler.exception.TaskNotFoundException;
 
+// interface for removing tasks
 public interface IRemoveTask {
-	void removeTask(String description) throws TaskNotFoundException;
+    
+    // remove a task using its description
+    void removeTask(String description) throws TaskNotFoundException;
 }

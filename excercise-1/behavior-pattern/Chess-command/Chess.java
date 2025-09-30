@@ -1,4 +1,4 @@
-// Receiver
+// Receiver: knows how to perform actual chess actions
 class Chess {
     public void movePiece(String piece, String from, String to) {
         System.out.println(piece + " moved from " + from + " to " + to);
