@@ -62,6 +62,7 @@
 ---
 
 # Exercise 2 - Instructions
+## Note - to run exercise 2 make sure to setup project in eclipse IDE dont try to run by just opening in vs code. u may experience problems
 
 ## Problem Statement 1 - Astronaut Daily Schedule Organizer
 
